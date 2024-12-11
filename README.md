@@ -1,8 +1,8 @@
-# ---
-# type: md
-# title: Dotfiles
-# tags: Dotfiles
-# ---
+// ---
+// type: md
+// title: Dotfiles
+// tags: Dotfiles
+// ---
 
 
 # Dotfiles
