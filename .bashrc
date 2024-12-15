@@ -22,6 +22,7 @@ alias r='cd $OLDPWD'
 alias c='clear'
 
 alias k='kubectl'
+alias runssh='docker run --rm --volume "$SSH_AUTH_SOCK":/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent'
 alias d='docker'
 alias dc='docker-compose'
 alias dcb='docker-compose build'
