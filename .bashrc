@@ -83,5 +83,6 @@ fi
 #   -------
 #  | BASH |
 #  -------
-export PS1="\[\e[0;35m\]$(parse_git_branch) \[\e[0m\]\[\e[0;36m\]\u\[\e[0m\]:\[\e[0;33m\]\w\[\e[0m\] -> "
+bash_header="\[\e[0;35m\]$(parse_git_branch) \[\e[0m\]\[\e[0;36m\]\u\[\e[0m\]:\[\e[0;33m\]\w\[\e[0m\] -> "
+export PS1="$bash_header"
 
