@@ -22,7 +22,8 @@ alias r='cd $OLDPWD'
 alias c='clear'
 
 alias k='kubectl'
-alias runssh='docker run --rm --volume "$SSH_AUTH_SOCK":/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent'
+alias runssh='docker run --rm -it --volume "$SSH_AUTH_SOCK":/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent'
+alias runws='docker run --rm -it -v "$(pwd):/workspace" -v /workspace'
 alias d='docker'
 alias dc='docker-compose'
 alias dcb='docker-compose build'
@@ -47,19 +48,17 @@ export EDITOR="nvim"
 #  | Functions |
 #  ------------
 mkcd(){
-  mkdir -p "$1" && cd "$1"
+  mkdir -p "$1" && cd "$1" || exit
 }
 
 parse_git_branch(){
-  git rev-parse --is-inside-work-tree >/dev/null 2>%1
-
-  if [ $? -eq 0 ]; then
+  if git rev-parse --git-dir > /dev/null 2>&1; then
     echo "($(git branch --show-current 2>/dev/null))"
   fi
 }
 
 yq(){
-  docker run --rm -v "${PWD}":/workdir mikefarah/yq "$@"
+  docker run --rm -i -v "${PWD}":/workdir mikefarah/yq "$@"
 }
 
 _call_navi(){
