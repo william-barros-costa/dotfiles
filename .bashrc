@@ -86,3 +86,6 @@ fi
 bash_header="\[\e[0;35m\]$(parse_git_branch) \[\e[0m\]\[\e[0;36m\]\u\[\e[0m\]:\[\e[0;33m\]\w\[\e[0m\] -> "
 export PS1="$bash_header"
 
+# Set portuguese keyboard layout
+setxkbmap -layout pt
+
