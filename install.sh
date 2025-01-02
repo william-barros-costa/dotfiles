@@ -9,3 +9,5 @@ do
   stow -D "$folder"
   stow "$folder"
 done
+
+mv -f .bashrc "$HOME/.bashrc"
