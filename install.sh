@@ -3,6 +3,9 @@
 # Prepare environment variables
 . env.sh
 
+cp ".bashrc" ~
+cp ".profile" ~
+
 for folder in ${STOW_FOLDERS//,/ }
 do
   echo "Stowing $folder"
