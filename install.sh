@@ -3,8 +3,8 @@
 # Prepare environment variables
 . env.sh
 
-cp ".bashrc" ~
-cp ".profile" ~
+cp -f ".bashrc" ~
+cp -f ".profile" ~
 
 for folder in ${STOW_FOLDERS//,/ }
 do
@@ -13,4 +13,3 @@ do
   stow "$folder"
 done
 
-mv -f .bashrc "$HOME/.bashrc"
