@@ -23,7 +23,7 @@ alias c='clear'
 
 alias k='kubectl'
 alias runssh='docker run --rm -it --volume "$SSH_AUTH_SOCK":/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent'
-alias runws='docker run --rm -it -v "$(pwd):/workspace" -v /workspace'
+alias runws='docker run --rm -it -v "$(pwd):/workspace" -w /workspace'
 alias d='docker'
 alias dc='docker-compose'
 alias dcb='docker-compose build'
