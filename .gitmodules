@@ -1,6 +1,6 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:william-barros-costa/nvim.git
-[submodule "tmux/.config/.tmux/plugins/tpm"]
-	path = tmux/.config/.tmux/plugins/tpm
+[submodule "tmux/.config/tmux/plugins/tpm"]
+	path = tmux/.config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
