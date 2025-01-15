@@ -76,8 +76,11 @@ _call_navi(){
 #  ---------------------
 if [ -f /etc/bash_completion ]; then
   source /etc/bash_completion
-  source <(kubectl completion bash)
-  complete -F __start_kubectl k
+  if command -v kubectl &>/dev/null
+  then
+    source <(kubectl completion bash)
+    complete -F __start_kubectl k
+  fi
 fi
 
 #   -------
@@ -87,13 +90,13 @@ bash_header="\[\e[0;35m\]$(parse_git_branch) \[\e[0m\]\[\e[0;36m\]\u\[\e[0m\]:\[
 export PS1="$bash_header"
 
 # Set portuguese keyboard layout
-setxkbmap -layout pt
+setxkbmap -layout pt 2>/dev/null
 
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f ~/.cargo/bin/navi ] && source ~/.cargo/bin/navi 
+[ -f ~/.cargo/bin/navi ] && export PATH="${PATH}:/home/ubuntu22/.cargo/bin"
 
 export XDG_CONFIG_HOME="$HOME/.config"
