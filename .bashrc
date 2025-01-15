@@ -94,3 +94,5 @@ setxkbmap -layout pt
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export $XDG_CONFIG_HOME="$HOME/.config"

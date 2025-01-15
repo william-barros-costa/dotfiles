@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ -z $XDG_CONFIG_HOME ]]; then
-    XDG_CONFIG_HOME="i3,nvim,tmux"
+    XDG_CONFIG_HOME="$HOME/.config"
     export XDG_CONFIG_HOME 
 fi
 
