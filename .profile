@@ -25,3 +25,7 @@ then
     bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
   fi
 fi
+
+if [ -f "$HOME/.bashrc" ]; then
+    source "$HOME/.bashrc"
+fi
