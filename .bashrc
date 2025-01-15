@@ -95,4 +95,4 @@ setxkbmap -layout pt
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export $XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
