@@ -14,7 +14,14 @@ then
     eval sudo pacman -S "$packages"
   fi
 
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  ~/.fzf/install
-  bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
+  if [ ! -d ~/.fzf ]
+  then
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+  fi
+
+  if [ ! -f ~/.cargo/bin/navi ]
+  then
+    bash <(curl -sL https://raw.githubusercontent.com/denisidoro/navi/master/scripts/install)
+  fi
 fi
