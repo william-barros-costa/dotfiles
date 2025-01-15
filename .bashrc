@@ -96,7 +96,7 @@ setxkbmap -layout pt 2>/dev/null
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash 2>/dev/null
 [ -f ~/.cargo/bin/navi ] && export PATH="${PATH}:/home/ubuntu22/.cargo/bin"
 
 export XDG_CONFIG_HOME="$HOME/.config"
