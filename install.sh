@@ -9,7 +9,7 @@ cp -f ".profile" ~
 for folder in ${STOW_FOLDERS//,/ }
 do
   echo "Stowing $folder"
-  stow -d "$DOTFILES" -D "$folder"
-  stow -d "$DOTFILES" "$folder"
+  stow -t ~ "$folder"
+  stow -t ~ "$folder"
 done
 
